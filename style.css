@@ -1,0 +1,813 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff;
+  color: #111;
+}
+
+/* Navigation Bar */
+.navbar {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: transparent;
+  color: white;
+}
+
+nav ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  font-weight: bold;
+}
+
+nav ul a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 1px;
+  transition: color 0.2s;
+}
+
+nav ul a:hover {
+  color: #ccc;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  width: 100%;
+  background: url('woman1.jpg') no-repeat center center / cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 4rem;
+  color: white;
+}
+
+.hero-content {
+  text-align: right;
+  max-width: 400px;
+}
+
+.tagline {
+  font-size: 0.9rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.hero h2 {
+  font-size: 2.2rem;
+  margin: 0.5rem 0;
+}
+
+.hero button {
+  padding: 0.5rem 1.5rem;
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hero button:hover {
+  background-color: white;
+  color: #111;
+}
+
+/* Carousel Section 2 */
+.second {
+  padding: 60px 20px;
+  position: relative;
+}
+
+.carousel-wrapper {
+  position: relative;
+}
+
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 20px;
+  scroll-behavior: smooth;
+  padding: 20px 0;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+/* Scroll Arrows */
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: background 0.2s ease;
+}
+
+.nav-btn:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.nav-btn.left {
+  left: -10px;
+}
+
+.nav-btn.right {
+  right: -10px;
+}
+
+/* Product Cards */
+.product-card {
+  flex: 0 0 auto;
+  width: 400px;
+  height: 620px;
+  border-radius: 2rem;
+  background-size: cover;
+  background-position: center;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.product-card:hover {
+  transform: scale(1.02);
+}
+
+/* Product Top Details */
+.details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: grey;
+  background: rgba(255, 255, 255, 0.6);
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+}
+
+/* New Badge */
+.new {
+  background-color: grey;
+  color: white;
+  padding: 5px 12px;
+  font-size: 12px;
+  border-radius: 999px;
+}
+
+/* Buy Button */
+.product-card button {
+  margin: 0 auto 20px auto;
+  background-color: white;
+  color: grey;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 999px;
+  font-size: 16px;
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.product-card button:hover {
+  background-color: #f2f2f2;
+}
+.product-card.mist {
+  background-image: url('rhode mist.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 2rem;
+  height: 620px;
+  width: 400px;
+  transition: background-image 1s ease-in-out;
+}
+
+.product-card.mist:hover {
+  background-image: url('mist.webp'); /* Change to your hover image */
+}
+
+.product-card.glow {
+  background-image: url('glow\ set.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 2rem;
+  height: 620px;
+  width: 400px;
+  transition: background-image 1s ease-in-out;
+}
+
+.product-card.glow:hover {
+  background-image: url('glow.webp'); 
+}
+.product-card.blush {
+  background-image: url('blush.webp');
+  background-size: cover;
+  background-position: center;
+  border-radius: 2rem;
+  height: 620px;
+  width: 400px;
+  transition: background-image 1s ease-in-out;
+}
+
+.product-card.blush:hover {
+  background-image: url('https://i.pinimg.com/736x/ff/db/6a/ffdb6a127207fce2d2b867018896e4e1.jpg'); /* Change to your hover image */
+}
+.product-card.pink {
+  background-image: url('https://www.rhodeskin.com/cdn/shop/files/pink-edit-hero-desktop_5f9a4b6c-bdce-460c-b942-f9c4de7693f3_1440x.jpg?v=1746645594');
+  background-size: cover;
+  background-position: center;
+  border-radius: 2rem;
+  height: 620px;
+  width: 400px;
+  transition: background-image 1s ease-in-out;
+}
+
+.product-card.pink:hover {
+  background-image: url('https://www.rhodeskin.com/cdn/shop/files/pink-edit-hover_1_1440x.jpg?v=1746679042'); 
+}
+.product-card.prep {
+  background-image: url('https://i.pinimg.com/736x/a4/59/43/a45943e179aabf3dec9229a2c70ff047.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 2rem;
+  height: 620px;
+  width: 400px;
+  transition: background-image 1s ease-in-out;
+}
+
+.product-card.prep:hover {
+  background-image: url('https://www.rhodeskin.com/cdn/shop/files/glazing_milk_card-2_1440x.jpg?v=1686006476'); 
+}
+.product-card.blushes {
+  background-image: url('https://www.rhodeskin.com/cdn/shop/files/blush-trio-Hero_Desktop_cef6d111-985b-4f7f-a8a9-6c92425051b6_1440x.jpg?v=1746645594');
+  background-size: cover;
+  background-position: center;
+  border-radius: 2rem;
+  height: 620px;
+  width: 400px;
+  transition: background-image 1s ease-in-out;
+}
+
+.product-card.blushes:hover {
+  background-image: url('https://www.rhodeskin.com/cdn/shop/files/blush-hover_2_1440x.jpg?v=1717626412'); 
+}
+.product-card.seal {
+  background-image: url('https://www.rhodeskin.com/cdn/shop/files/BB-FAQ_d1dad520-96a9-4bf9-b77d-2f623e2f3ead_1440x.jpg?v=1749078015');
+  background-size: cover;
+  background-position: center;
+  border-radius: 2rem;
+  height: 620px;
+  width: 400px;
+  transition: background-image 1s ease-in-out;
+}
+
+.product-card.seal:hover {
+  background-image: url('https://www.rhodeskin.com/cdn/shop/files/bb-hover_5108f718-6e5f-4c0e-9ea1-867e84efc525_1440x.jpg?v=1749340189'); 
+}
+.product-card.shape {
+  background-image: url('https://i.pinimg.com/736x/55/ce/c6/55cec6644be0abe99747d87b748cd1b3.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 2rem;
+  height: 620px;
+  width: 400px;
+  transition: background-image 1s ease-in-out;
+}
+
+.product-card.shape:hover {
+  background-image: url('https://www.rhodeskin.com/cdn/shop/files/pls-balance-hover_1440x.jpg?v=1737704692'); 
+} 
+.product-card.travel {
+  background-image: url('https://i.pinimg.com/736x/8e/bf/34/8ebf34c12bba3bf43c429f4167b780e9.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 2rem;
+  height: 620px;
+  width: 400px;
+  transition: background-image 1s ease-in-out;
+}
+
+.product-card.travel:hover {
+  background-image: url('https://www.rhodeskin.com/cdn/shop/files/hover-travel-set_1440x.jpg?v=1732757932'); 
+} 
+.product-card.tint {
+  background-image: url('https://i.pinimg.com/736x/38/e1/df/38e1dfcaffb74132bbc7b9aec1341fce.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 2rem;
+  height: 620px;
+  width: 400px;
+  transition: background-image 1s ease-in-out;
+}
+
+.product-card.tint:hover {
+  background-image: url('https://www.rhodeskin.com/cdn/shop/files/ribbon-hover_1440x.jpg?v=1712794883'); 
+} 
+.product-card.kit {
+  background-image: url('https://i.pinimg.com/736x/10/67/d4/1067d48fd31830cdc76a7dd38f798d46.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 2rem;
+  height: 620px;
+  width: 400px;
+  transition: background-image 1s ease-in-out;
+}
+
+.product-card.kit:hover {
+  background-image: url('https://www.rhodeskin.com/cdn/shop/files/hover_c4229801-a45a-435c-b0dc-cd91dc365650_1440x.jpg?v=1728002692'); 
+} 
+.product-card.case {
+  background-image: url('https://i.pinimg.com/736x/7d/cd/15/7dcd1565fe90ff61d397632946e4d98f.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 2rem;
+  height: 620px;
+  width: 400px;
+  transition: background-image 1s ease-in-out;
+}
+
+.product-card.case:hover {
+  background-image: url('https://www.rhodeskin.com/cdn/shop/files/lip-case-hb-hover-1_1440x.jpg?v=1713833373'); 
+} 
+.product-card.nourish {
+  background-image: url('https://i.pinimg.com/736x/49/3f/41/493f415ddb6cd72ed1b9e3fda79a01e0.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 2rem;
+  height: 620px;
+  width: 400px;
+  transition: background-image 1s ease-in-out;
+}
+
+.product-card.nourish:hover {
+  background-image: url('https://www.rhodeskin.com/cdn/shop/files/plt-hover_1440x.jpg?v=1744135873'); 
+} 
+.product-card.cleanse {
+  background-image: url('https://i.pinimg.com/736x/4a/56/66/4a56661a8d796b0ae53b52ba77d63a54.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 2rem;
+  height: 620px;
+  width: 400px;
+  transition: background-image 1s ease-in-out;
+}
+
+.product-card.cleanse:hover {
+  background-image: url('https://www.rhodeskin.com/cdn/shop/files/pineapple-refresh-hero-m-1_1440x.jpg?v=1745626829'); 
+} 
+.product-card.glaze{
+  background-image: url('https://i.pinimg.com/736x/89/86/ef/8986ef645abacf7976423a3699fa0257.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 2rem;
+  height: 620px;
+  width: 400px;
+  transition: background-image 1s ease-in-out;
+}
+
+.product-card.glaze:hover {
+  background-image: url('https://www.rhodeskin.com/cdn/shop/files/barrier-set-2_1440x.jpg?v=1736966006'); 
+} 
+.product-card.comfort{
+  background-image: url('https://i.pinimg.com/736x/26/27/bb/2627bb9bf69526d96c250a3ab4f8f793.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 2rem;
+  height: 620px;
+  width: 400px;
+  transition: background-image 1s ease-in-out;
+}
+
+.product-card.comfort:hover {
+  background-image: url('https://www.rhodeskin.com/cdn/shop/files/brc-hover_1440x.jpg?v=1744135873'); 
+} 
+.product-card.shapetint {
+  background-image: url('https://www.rhodeskin.com/cdn/shop/files/lip-combo-product-card_2_1440x.jpg?v=1746678490');
+  background-size: cover;
+  background-position: center;
+  border-radius: 2rem;
+  height: 620px;
+  width: 400px;
+  transition: background-image 1s ease-in-out;
+}
+
+.product-card.shapetint:hover {
+  background-image: url('https://www.rhodeskin.com/cdn/shop/files/lip-combo-hover_1440x.jpg?v=1744667801'); 
+} 
+.product-card.mirror{
+  background-image: url('https://i.pinimg.com/736x/e9/fa/40/e9fa4042d488dcd8cc761c7fdab285f7.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 2rem;
+  height: 620px;
+  width: 400px;
+  transition: background-image 1s ease-in-out;
+}
+
+.product-card.mirror:hover {
+  background-image: url('https://www.rhodeskin.com/cdn/shop/files/mirror-hero-m_1440x.jpg?v=1737142931'); 
+} 
+
+/* section 3  */
+#threee{
+  display: flex;
+  justify-content: space-between;
+}
+#mistbutton {
+  background-color: #f5f4f1;
+  color: #67645E;
+  height: 600px;
+  width: 50%;
+  margin: 40px auto;
+  margin-left: 10px;
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 40px;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Content */
+#text {
+  max-width: 500px;
+  margin-bottom: 1.5rem;
+}
+
+#text h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+#text p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+#shopnow {
+  padding: 10px 20px;
+  border: 1px solid #67645E;
+  background-color: transparent;
+  color: #67645E;
+  font-weight: bold;
+  border-radius: 2rem;
+  cursor: pointer;
+  width: fit-content;
+}
+
+/* 🎉 Marquee styling */
+#mist-marquee {
+  position: absolute;
+  right: 10px;
+  top: 0;
+  bottom: 0;
+  width: 40px;
+  overflow: hidden;
+}
+
+.marquee-track {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: scrollUp 10s linear infinite;
+}
+
+.marquee-track span {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #4e4d4b;
+  line-height: 2.2rem;
+}
+
+/* 🎬 Marquee animation */
+@keyframes scrollUp {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+#bigimage{
+  background-color: pink;
+  height: 600px;
+  width:50%;
+   border-radius: 2rem;
+   margin-right: 10px;
+   background: url(https://www.rhodeskin.com/cdn/shop/files/hp-mist_1440x.jpg?v=1750091994)no-repeat center center/cover;
+}
+
+/* section 4 */
+body {
+  margin: 0;
+  overflow-x: hidden;  /* ✅ Removes horizontal scrollbar */
+}
+
+
+.hail {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  border-radius: 2rem;
+  position: relative;
+}
+
+.hail img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 2rem;
+  display: block;
+  
+  
+}
+
+.image-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  z-index: 1;
+  max-width: 800px;
+  padding: 20px;
+  border-radius: 1rem;
+  font-family: 'Inter', sans-serif;
+}
+
+.image-overlay h1 {
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-transform: lowercase;
+  letter-spacing: 1px;
+}
+
+.image-overlay p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+/* Button Styling */
+.image-overlay button {
+  padding: 12px 24px;
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 2rem;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.image-overlay button:hover {
+  background-color: #e2e2e2;
+}
+
+
+/* section 5 */
+#interest {
+  display: flex;
+  gap:20px;
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.half-screen {
+  width: 50%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.image-left {
+  position: relative;
+  width: 50%;
+  height: 100vh;
+  overflow: hidden;
+  border-radius: 20px;
+}
+.image-right {
+  position: relative;
+  width: 50%;
+  height: 100vh;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+
+.background-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: 10px;
+  left: 10px;
+  z-index: 1;
+  filter: brightness(0.95);
+  border-radius: 20px; 
+}
+
+
+
+.overlaycleanser {
+  position: absolute;
+  z-index: 2;
+  top: 30px;
+  left: 10px; 
+  font-size: 2.5rem;
+  text-transform: lowercase;
+  font-weight: bold;
+  color: #898989;
+  padding: 10px 20px;
+  
+}
+
+
+/* Overlay text block on second image */
+.overlaytext {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+   padding: 30px;
+   top:250px;
+   
+  border-radius: 12px;
+}
+
+.containstext {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color:#a8a7a7;
+}
+
+.subtext {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: #a8a7a7;
+}
+
+.shopping {
+  padding: 12px 24px;
+  color: #a8a7a7;
+  background-color: rgb(254, 253, 253);
+  border: static;
+  border-color: #a8a7a7;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 2rem;
+  transition: background-color 0.3s ease;
+}
+
+.shopping:hover {
+  background-color: #333;
+}
+.carousel2 {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+}
+
+.drumroll {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.rolling {
+  min-width: 100%;
+  height: 100vh;
+  display: none; /* Hide all slides by default */
+}
+
+.rolling.active {
+  display: flex; }
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: none;
+  font-size: 2rem;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-btn:hover {
+  background-color: #ccc;
+}
+
+.carousel-btn.prev {
+  left: 20px;
+}
+
+.carousel-btn.next {
+  right: 20px;
+}
+#last img{
+  margin-top:10px;
+  margin-left:10px;
+  border-radius: 2rem;
+}
+
+/* section 7 */n  
+#rhode{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20vw; 
+  font-weight: bold;
+  font-family: sans-serif;
+  background-color: rgb(224, 225, 211);
+  color: #a8a7a7;
+  border-radius: 2rem;
+}
+
+
+
+
+
+
+
+
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .carousel {
+    gap: 10px;
+  }
+
+  .product-card {
+    width: 300px;
+    height: 500px;
+  }
+
+  .details {
+    font-size: 1.2rem;
+  }
+
+  .product-card button {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+
+  .nav-btn {
+    font-size: 1.5rem;
+    padding: 0.3rem 0.8rem;
+  }
+}
